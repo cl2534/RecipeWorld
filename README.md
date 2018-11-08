@@ -1,13 +1,13 @@
-# cl2534-final-project
 
-Recipe World
+(___TODO__: your project name_)
 
-Overview
+# Recipe World
+
+## Overview
 
 Recipe World is where people share their own recipe along with pictures. After login/sign up, users can make post and "like" other people's recipe. Every week, top 5 "liked" recipes will be shown. They can also see their "liked" recipes in their profile, allowing user to revisit a specific recipe post. Based on the "tags" created in every post, users can search recipes for related menus.   
 
-
-Data Model
+## Data Model
 
 The application will store Users, RecipePosts, and Tags
 
@@ -16,19 +16,20 @@ each post can have multiple tags
 each post can have multiple likes
 
 
-
 An Example User:
 
+```javascript
 {
   username: "recipeworld",
   hash: // a password hash,
   likedRecipe: // an array of references to Likes
   posts: //an array of reference to Posts
 }
-
+```
 
 An Example List with Embedded Items:
 
+```javascript
 {
   user: // a reference to a User object
   name: "Breakfast foods",
@@ -42,13 +43,12 @@ An Example List with Embedded Items:
   ],
   createdAt: // timestamp
 }
+```
 
 
-Link to Commented First Draft Schema:  https://github.com/nyu-csci-ua-0480-001-003-fall-2018/cl2534-final-project/blob/master/db.js
+## [Link to Commented First Draft Schema](db.js)
 
-
-Wireframes
-(TODO: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
+## Wireframes
 
 /user/:id - page for user profile based on id
 
@@ -58,37 +58,45 @@ Wireframes
 
 /recipe/create - page for creating recipe post
 
-Site map
-(TODO: draw out a site map that shows how pages are related to each other)
 
-User Stories or Use Cases
+## Site map
 
-as non-registered user, I can register a new account with the site
-as a user, I can log in to the site
-as a user, I can create my recipe post
-as a user, I can view all of my recipe post in my profile
-as a user, I can like other people's recipe posts
-as a user, I can delete my recipe post
+(___TODO__: draw out a site map that shows how pages are related to each other_)
 
-Research Topics
+Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/20/Sitemap_google.jpg), but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
 
-(2 points) Use a Bootstrap for CSS framework throughout your site
+## User Stories or Use Cases
 
-  I will try to learn how to implement Bootstrap into my app.
+1. as non-registered user, I can register a new account with the site
+2. as a user, I can log in to the site
+3. as a user, I can create my recipe post
+4. as a user, I can view all of my recipe post in my profile
+5. as a user, I can like other people's recipe posts
+6. as a user, I can delete my recipe post
 
-(3 points)  Perform client side form validation using custom JavaScript or JavaScript library
+## Research Topics
 
-  Errors integrated into DOM
+(___TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed_)
 
-(4 points) Using React.js
+* (2 points) Use a Bootstrap for CSS framework throughout your site
 
-  I have previously learned React.js and want to use it to solidify the concepts
+  * I will try to learn how to implement Bootstrap into my app.
+
+* (3 points)  Perform client side form validation using custom JavaScript or JavaScript library
+
+  * Errors integrated into DOM
+
+* (4 points) Using React.js
+
+  * I have previously learned React.js and want to use it to solidify the concepts
 
 
-Link to Initial Main Project File
-(TODO: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js)
+## [Link to Initial Main Project File](app.js)
 
-Annotations / References Used
-(TODO: list any tutorials/references/etc. that you've based your code off of)
+(___TODO__: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js_)
 
-[tutorial on React.js] (https://www.youtube.com/watch?reload=9&v=MhkGQAoc7bc)
+## Annotations / References Used
+
+(___TODO__: list any tutorials/references/etc. that you've based your code off of_)
+
+1. [tutorial on React.js](https://reactjs.org/docs/getting-started.html)
