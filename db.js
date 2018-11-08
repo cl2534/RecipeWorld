@@ -17,8 +17,9 @@ const User = new mongoose.Schema({
 const Recipe = new mongoose.Schema({
   user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
   name: {type: String, required: true},
-  description: {type: String, required: true}},
-  likes: {type: Number, required: true}},
+  description: {type: String, required: true},
+  picture_url: {type: String, required: true}
+  likes: {type: Number, required: true},
   tags: [{type: mongoose.Schema.Types.ObjectId, ref: 'Tag'}],
   createdAt: {type: Date, required: true},
   {

@@ -50,6 +50,8 @@ An Example List with Embedded Items:
 
 ## Wireframes
 
+ * pictures are in documentation folder *
+ 
 /user/:id - page for user profile based on id
 
 /recipes - page for showing list of recipe posts
@@ -88,7 +90,7 @@ An Example List with Embedded Items:
 
 ## [Link to Initial Main Project File](app.js)
 
-## [Link to my React Setup] (recipeworld)
+  * React initial set up is in the foler "recipeworld"
 
 ## Annotations / References Used
 
