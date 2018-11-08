@@ -50,22 +50,16 @@ Link to Commented First Draft Schema
 Wireframes
 (TODO: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
-/list/create - page for creating a new shopping list
+/user/:id - page for user profile based on id
 
-list create
+/recipes - page for showing list of recipe posts
 
-/list - page for showing all shopping lists
+/recipes/:id - page for each recipe based on id
 
-list
-
-/list/slug - page for showing specific shopping list
-
-list
+/recipe/create - page for creating recipe post
 
 Site map
 (TODO: draw out a site map that shows how pages are related to each other)
-
-Here's a complex example from wikipedia, but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
 
 User Stories or Use Cases
 (TODO: write out how your application will be used through user stories and / or use cases)
@@ -78,20 +72,19 @@ as a user, I can like other people's recipe posts
 as a user, I can delete my recipe post
 
 Research Topics
-(TODO: the research topics that you're planning on working on along with their point values... and the total points of research topics listed)
 
-(5 points) Perform client side form validation using a JavaScript library
+(2 points) Use a Bootstrap for CSS framework throughout your site
 
-(5 points) Using React.js
+  I will try to learn how to implement Bootstrap into my app.
 
+(3 points)  Perform client side form validation using custom JavaScript or JavaScript library
 
+  Errors integrated into DOM
 
-(4 points) Perform client side form validation using a JavaScript library
-see cs.nyu.edu/~jversoza/ait-final/my-form
-if you put in a number that's greater than 5, an error message will appear in the dom
-(5 points) vue.js
-used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
-10 points total out of 8 required points (TODO: addtional points will not count for extra credit)
+(4 points) Using React.js
+
+  I have previously learned React.js and want to use it to solidify the concepts
+
 
 Link to Initial Main Project File
 (TODO: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js)
@@ -99,5 +92,4 @@ Link to Initial Main Project File
 Annotations / References Used
 (TODO: list any tutorials/references/etc. that you've based your code off of)
 
-passport.js authentication docs - (add link to source code that was based on this)
-tutorial on vue.js - (add link to source code that was based on this)
+tutorial on React.js
