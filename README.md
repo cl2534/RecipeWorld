@@ -44,7 +44,7 @@ An Example List with Embedded Items:
 }
 
 
-Link to Commented First Draft Schema
+[Link to Commented First Draft Schema] (https://github.com/nyu-csci-ua-0480-001-003-fall-2018/cl2534-final-project/blob/master/db.js)
 
 
 Wireframes
@@ -92,4 +92,4 @@ Link to Initial Main Project File
 Annotations / References Used
 (TODO: list any tutorials/references/etc. that you've based your code off of)
 
-tutorial on React.js
+[tutorial on React.js] (https://www.youtube.com/watch?reload=9&v=MhkGQAoc7bc)
