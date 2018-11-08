@@ -67,7 +67,8 @@ An Example List with Embedded Items:
 
 
 ## Site map
-[___TODO__]
+
+![Site Map](documentation/Sitemap.jpg)
 
 
 ## User Stories or Use Cases
