@@ -61,9 +61,6 @@ An Example List with Embedded Items:
 
 ## Site map
 
-(___TODO__: draw out a site map that shows how pages are related to each other_)
-
-Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/20/Sitemap_google.jpg), but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
 
 ## User Stories or Use Cases
 
@@ -93,10 +90,7 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
 
 ## [Link to Initial Main Project File](app.js)
 
-(___TODO__: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js_)
-
 ## Annotations / References Used
 
-(___TODO__: list any tutorials/references/etc. that you've based your code off of_)
-
 1. [tutorial on React.js](https://reactjs.org/docs/getting-started.html)
+2. [tutorial on bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
