@@ -51,17 +51,23 @@ An Example List with Embedded Items:
 ## Wireframes
 
  * pictures are in documentation folder *
- 
-/user/:id - page for user profile based on id
 
-/recipes - page for showing list of recipe posts
 
 /recipes/:id - page for each recipe based on id
 
 /recipe/create - page for creating recipe post
 
+![recipe create & recipe :id](documentation/WireFrame1.png)
+
+/user/:id - page for user profile based on id
+
+/recipes - page for showing list of recipe posts
+
+![recipes & user :id](documentation/WireFrame2.png)
+
 
 ## Site map
+[___TODO__]
 
 
 ## User Stories or Use Cases
