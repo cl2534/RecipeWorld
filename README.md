@@ -57,13 +57,13 @@ An Example List with Embedded Items:
 
 /recipe/create - page for creating recipe post
 
-![recipe create & recipe :id](documentation/WireFrame1.png)
+![recipe create & recipe :id](documentation/WireFrame1.jpg)
 
 /user/:id - page for user profile based on id
 
 /recipes - page for showing list of recipe posts
 
-![recipes & user :id](documentation/WireFrame2.png)
+![recipes & user :id](documentation/WireFrame2.jpg)
 
 
 ## Site map
