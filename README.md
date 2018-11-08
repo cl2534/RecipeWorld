@@ -44,7 +44,7 @@ An Example List with Embedded Items:
 }
 
 
-[Link to Commented First Draft Schema]: https://github.com/nyu-csci-ua-0480-001-003-fall-2018/cl2534-final-project/blob/master/db.js
+Link to Commented First Draft Schema:  https://github.com/nyu-csci-ua-0480-001-003-fall-2018/cl2534-final-project/blob/master/db.js
 
 
 Wireframes
@@ -62,7 +62,6 @@ Site map
 (TODO: draw out a site map that shows how pages are related to each other)
 
 User Stories or Use Cases
-(TODO: write out how your application will be used through user stories and / or use cases)
 
 as non-registered user, I can register a new account with the site
 as a user, I can log in to the site
