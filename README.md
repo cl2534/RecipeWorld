@@ -1,5 +1,5 @@
 
-(___TODO__: your project name_)
+___TODO__: 
 
 # Recipe World
 
@@ -11,9 +11,9 @@ Recipe World is where people share their own recipe along with pictures. After l
 
 The application will store Users, RecipePosts, and Tags
 
-users can have multiple recipe posts
-each post can have multiple tags
-each post can have multiple likes
+1. users can have multiple recipe posts
+2. each post can have multiple tags
+3. each post can have multiple likes
 
 
 An Example User:
@@ -97,7 +97,7 @@ An Example List with Embedded Items:
 
 ## [Link to Initial Main Project File](app.js)
 
-  * React initial set up is in the foler "recipeworld"
+  * React initial set up is in the folder "recipeworld"
 
 ## Annotations / References Used
 
