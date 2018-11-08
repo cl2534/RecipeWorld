@@ -23,7 +23,7 @@ An Example User:
   username: "recipeworld",
   hash: // a password hash,
   likedRecipe: // an array of references to Likes
-  posts: //an array of reference to Posts
+  myRecipe: //an array of reference to Posts
 }
 ```
 
@@ -73,8 +73,6 @@ An Example List with Embedded Items:
 
 ## Research Topics
 
-(___TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed_)
-
 * (2 points) Use a Bootstrap for CSS framework throughout your site
 
   * I will try to learn how to implement Bootstrap into my app.
@@ -89,6 +87,8 @@ An Example List with Embedded Items:
 
 
 ## [Link to Initial Main Project File](app.js)
+
+## [Link to my React Setup] (recipeworld)
 
 ## Annotations / References Used
 
