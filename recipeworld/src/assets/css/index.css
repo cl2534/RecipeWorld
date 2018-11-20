@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #58A4B0;
+}
+
+div {
+  background-color: #58A4B0;
+}
+
+div.col-container {
+  display: inline;
+  flex-direction: column;
+}
+
+.create-post-form {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.center-this-box {
+  padding-left: 10%;
+}
+
+.column {
+  float: left;
+}
+
+.post-container {
+  width: 70.5%;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 20pt;
+  color: #373F51
+}
+
+
+
+.user-description {
+  font-size: 14pt;
+}
+
+
+.fixed {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.about-me {
+  display: inline;
+  float: left;
+  width: 29.5%;
+  outline: 3px solid #1B1B1E;
+}
+
+.boxxy {
+  float: left;
+  text-align: center;
+  position: relative;
+  outline: 3px solid #1B1B1E;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.post {
+  margin-bottom: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  outline: 3px solid #1B1B1E;
+}
+
+.center-text {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 40%;
+  background: transparent;
+}
+
+.post-location {
+  font-size: 16pt;
+}
+
+.user {
+  display: flex;
+}
+
+.user-text{
+  float: left
+}
+
+.avatar{
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.header {
+  width: 100%;
+  background-color: #1B1B1E;
+}
+
+
+.header-element{
+  font-color: blue;
+  display: inline;
+  margin-left: 15%;
+}
+
+.right-list {
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  list-style: none;
+}
+
+.style-image {
+  filter: brightness(75%);
+}
+
+
+.base-div {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-right {
+  float: right;
+  height: 100%;
+}
+
+html {
+  background: #58A4B0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-button {
+  height: 50%;
+}
+
+div.side-bar {
+  background-color: #58A4B0;
+  border-top: 100px;
+  width: 32.4%;
+}
+
+.top-header-padding {
+  width: 100%;
+  height: 40px;
+  background-color: #58A4B0;
+}
+
+.post-inner {
+  padding-left: 10px;
+}
+
+.black {
+  background-color: #1B1B1E;
+}
+
+.navbar-header {
+  background-color: #1B1B1E;
+}
+
+a {
+  color: #373F51
+}
