@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const user = new mongoose.Schema({
   // username provided by authentication plugin
   // password hash provided by authentication plugin
-  likedRecipe:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
+  likedRecipe:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }],
   myRecipe:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
 });
 
