@@ -13,9 +13,10 @@ export default class UserPage extends Component {
       myRecipes: [],
     }
   }
-    componentDidMount() {
-      this.getUser()
-    }
+
+  componentDidMount() {
+    this.getUser()
+  }
 
   getUser = () => {
     if (window.location.href.includes("my-page")) {

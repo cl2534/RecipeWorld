@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // - require username and password upon log in.
 // - user can see his/her liked recipes by recipeId
 // - user can see his/her own recipes by recipeId
-const User = new mongoose.Schema({
+const user = new mongoose.Schema({
   // username provided by authentication plugin
   // password hash provided by authentication plugin
   likedRecipe:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
@@ -14,7 +14,7 @@ const User = new mongoose.Schema({
 });
 
 // recipe has name, description, likes (to track down likes), tags: referenced by tagId
-const Recipe = new mongoose.Schema({
+const recipeSchema = new mongoose.Schema({
   user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
   name: {type: String, required: true},
   description: {type: String, required: true},
@@ -27,7 +27,7 @@ const Recipe = new mongoose.Schema({
   });
 
 // for tags.
-const Tags = new mongoose.Schema({
+const tagSchema = new mongoose.Schema({
   name: {type: String, required: true}
 })
 
@@ -46,7 +46,9 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
  dbconf = conf.dbconf;
 } else {
  // if we're not in PRODUCTION mode, then use
- dbconf = 'mongodb://localhost/cl2534';
+ dbconf = 'mongodb://cl2534:tShgqzYX@class-mongodb.cims.nyu.edu/cl2534'
 }
-
+mongoose.model('User', user);
+mongoose.model('Recipe', recipeSchema);
+mongoose.model('Tag', tagSchema);
 mongoose.connect(dbconf);
