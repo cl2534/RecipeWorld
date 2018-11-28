@@ -2,13 +2,10 @@
 const mongoose = require('mongoose');
 
 // users
-// - authentication needed
-// - require username and password upon log in.
 // - user can see his/her liked recipes by recipeId
 // - user can see his/her own recipes by recipeId
 const User = new mongoose.Schema({
-  // username provided by authentication plugin
-  // password hash provided by authentication plugin
+  name: {type: String, required: true},
   myRecipe: { type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }
 });
 
@@ -18,12 +15,12 @@ const Recipe = new mongoose.Schema({
   name: {type: String, required: true},
   description: {type: String, required: true},
   picture_url: {type: String, required: true}
-  likes: {type: Number, required: true},
-  tags: [{type: mongoose.Schema.Types.ObjectId, ref: 'Tag'}],
-  createdAt: {type: Date, required: true},
-  {
-    _id: true
-  });
+  // likes: {type: Number, required: true},
+  // tags: [{type: mongoose.Schema.Types.ObjectId, ref: 'Tag'}],
+  // {
+  //   _id: true
+  // });
+})
 
 // for tags.
 const Tag = new mongoose.Schema({
