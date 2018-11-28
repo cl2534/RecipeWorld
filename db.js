@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
  dbconf = conf.dbconf;
 } else {
  // if we're not in PRODUCTION mode, then use
- dbconf = 'mongodb://cl2534:tShgqzYX@class-mongodb.cims.nyu.edu/cl2534'
+ dbconf = 'mongodb://localhost/cl2534'
 }
 mongoose.model('User', User);
 mongoose.model('Recipe', Recipe);

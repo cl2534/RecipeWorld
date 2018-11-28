@@ -3,7 +3,6 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import HomePage from './components/HomePage.js';
 import UserPage from './components/UserPage.js';
 import NewRecipe from './components/NewRecipe.js';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
