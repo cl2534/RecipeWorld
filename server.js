@@ -10,7 +10,7 @@ const API_PORT = 3001;
 const router = express.Router();
 const User = mongoose.model('User');
 const Recipe = mongoose.model('Recipe');
-const Tag = mongoose.model('Tag');
+const MONGODB_URL = "mongodb://cl2534:chfhd156@ds151951.mlab.com:51951/cl2534";
 // enable sessions
 const session = require('express-session');
 // const sessionOptions = {

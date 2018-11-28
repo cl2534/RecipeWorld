@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 // users
 // - user can see his/her liked recipes by recipeId
 // - user can see his/her own recipes by recipeId
-const User = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {type: String, required: true},
   myRecipe: { type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }
 });
 
 // recipe has name, description, likes (to track down likes), tags: referenced by tagId
-const Recipe = new mongoose.Schema({
+const RecipeSchema = new mongoose.Schema({
   user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
   name: {type: String, required: true},
   description: {type: String, required: true},
@@ -23,7 +23,7 @@ const Recipe = new mongoose.Schema({
 })
 
 // for tags.
-const Tag = new mongoose.Schema({
+const TagSchema = new mongoose.Schema({
   name: {type: String, required: true}
 })
 
@@ -44,8 +44,8 @@ const Tag = new mongoose.Schema({
 //  // if we're not in PRODUCTION mode, then use
 //  dbconf = 'mongodb://localhost/cl2534'
 // }
-const User = mongoose.model('User', User);
-const Recipe = mongoose.model('Recipe', Recipe);
+const User = mongoose.model('User', UserSchema);
+const Recipe = mongoose.model('Recipe', RecipeSchema);
 // mongoose.connect(dbconf);
 module.exports = User;
 module.exports = Recipe;
