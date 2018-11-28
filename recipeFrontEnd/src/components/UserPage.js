@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import RecipeContainer from './RecipeContainer';
-const User = mongoose.model('User');
-const Recipe = mongoose.model('User');
+
 export default class UserPage extends Component {
 
   constructor(props) {

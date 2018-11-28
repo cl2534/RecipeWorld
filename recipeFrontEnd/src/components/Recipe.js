@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import User from './User';
+import User from './UserPage';
 
 export default class Recipe extends Component{
   constructor(props) {

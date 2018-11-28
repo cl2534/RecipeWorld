@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RecipeContainer from './PostContainer.js';
+import RecipeContainer from './RecipeContainer.js';
 import Header from './Header.js';
 export default class HomePage extends Component {
 
