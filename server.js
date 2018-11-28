@@ -47,7 +47,6 @@ router.get("/getRecipes", (req, res) => {
     return res.json({ success: true, recipes: recipes });
   });
 });
-
 // this is our update method
 // this method overwrites existing data in our database
 router.post("/updateRecipe", (req, res) => {
@@ -81,15 +80,14 @@ router.post("/postRecipe", (req, res) => {
       error: "INVALID INPUTS"
     });
   }
-  recipe.user = userId;
-  recipe.name = name;
-  recipe.description = description;
-  recipe.picture_url = picture_url;
   recipe.save(err => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true });
   });
 });
+
+
+
 app.use("/api", router);
 
 // launch our backend into a port

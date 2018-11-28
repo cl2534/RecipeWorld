@@ -7,7 +7,7 @@ export default class NewRecipe extends Component {
     super(props)
 
     this.state = {
-        user_id: props.userId,
+        userId: props.userId,
         name: "",
         picture_url: "",
         description: "",
@@ -29,7 +29,7 @@ export default class NewRecipe extends Component {
       headers: {
         'Content-Type':'application/json'
       },
-      body: JSON.stringify({...this.state, likes: 0})
+      body: JSON.stringify({...this.state})
     })
     .then(res => res.json())
     .then(json => this.props.history.push('/'))

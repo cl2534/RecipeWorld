@@ -13,7 +13,7 @@ export default class HomePage extends Component {
   }
 
   fetchPosts = () => {
-    fetch('')
+    fetch('api/getRecipes')
     .then(res => res.json())
     .then(res => this.setState({
       recipes: res.recipes
