@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // - user can see his/her own recipes by recipeId
 const UserSchema = new mongoose.Schema({
   name: {type: String, required: true},
-  myRecipe: { type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }
+  myRecipes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }]
 });
 
 // recipe has name, description, likes (to track down likes), tags: referenced by tagId
