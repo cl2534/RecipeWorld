@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Recipe from './Recipe';
+import Grid from '@material-ui/core/Grid'
 //container class for posts
 
 export default class RecipeContainer extends Component{
@@ -19,9 +20,11 @@ export default class RecipeContainer extends Component{
 
   render() {
     return (
+      <Grid container justify="space-evenly" direction="row" alignItems = "flex-start" >
       <div className = 'post-container column'>
         {this.renderRecipe()}
       </div>
+      </Grid>
     )
   }
 }

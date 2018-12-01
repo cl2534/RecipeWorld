@@ -24,15 +24,13 @@ export default class NewRecipe extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    fetch('/postRecipe', {
+    fetch('api/getRecipes', {
       method: 'POST',
       headers: {
         'Content-Type':'application/json'
       },
       body: JSON.stringify({...this.state})
-    })
-    .then(res => res.json())
-    .then(json => this.props.history.push('/'))
+    }).then(res => res.json()).then(json => this.props.history.push('/'))
   }
 
 //TODO: make form even prettier.
@@ -47,7 +45,7 @@ export default class NewRecipe extends Component {
             <input type="text" name="name" size="73" value={this.state.name} onChange={this.handleChange} maxlength="100"/>
             <br /> <br />
             <label>Recipe Description: </label> <br />
-            <input type="text" name="location" size="73" value={this.state.description} onChange={this.handleChange} maxlength="30"/>
+            <input type="text" name="description" size="73" value={this.state.description} onChange={this.handleChange} maxlength="30"/>
             <br /> <br />
             <label> Image URL: </label> <br />
             <input type="URL" name="picture_url" size="73" value={this.state.picture_url} onChange={this.handleChange} maxlength="200"/>

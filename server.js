@@ -55,6 +55,17 @@ router.get("/getUsers", (req, res) => {
   });
 });
 
+router.post('/getRecipes', function(req, res) {
+  Recipe.create({
+    user: req.body.userId,
+    name: req.body.name,
+    description: req.body.description,
+    picture_url: req.body.picture_url
+  }).then(recipe => {
+    res.json(recipe)
+  });
+});
+
 router.get("/getUsers/:id", (req, res) => {
   let userId = req.params.id
   User.findById(userId, function(err, user) {

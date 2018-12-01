@@ -22,7 +22,7 @@ const RecipeSchema = new mongoose.Schema({
   // });
 })
 
-// for tags.
+// for tags.ß
 const TagSchema = new mongoose.Schema({
   name: {type: String, required: true}
 })
