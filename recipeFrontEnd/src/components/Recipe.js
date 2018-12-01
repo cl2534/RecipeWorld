@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
-import User from './UserPage';
+import UserPage from './UserPage';
 
 export default class Recipe extends Component{
   constructor(props) {
     super(props) //recipe
-    this.state = {
-      likes: props.post.likes,
-      likedAlready: false
-    }
   }
 
   // handleLike = () => {
@@ -28,7 +24,7 @@ export default class Recipe extends Component{
       <div className = 'post'>
         <div className = 'post-inner'>
           <div className="flex-container">
-            // <UserPage className="user-blurb" userId = {this.props.recipe.userId} />
+          <UserPage className="user-blurb" userId = {this.props.recipe.user} />
           </div>
           <div>
             <div className="post-title"> {this.props.recipe.name} </div>

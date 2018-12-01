@@ -19,7 +19,7 @@ export default class UserPage extends Component {
 
   getUser = () => {
     if (window.location.href.includes("my-page")) {
-      fetch('')
+      fetch('api/getUsers')
       .then(res => res.json())
       .then(res => {
         this.setState({
