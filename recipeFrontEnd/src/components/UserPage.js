@@ -19,37 +19,36 @@ export default class UserPage extends Component {
 
   getUser = () => {
     if (window.location.href.includes("my-page")) {
-      fetch('api/getUsers')
+      fetch('api/getUsers/' + this.props.userId)
       .then(res => res.json())
       .then(res => {
         this.setState({
-        currentUser: res.user
-        });
-        return res.user.id})
-      .then(user_id => this.userRecipes(user_id))
+        currentUser: res.user,
+      }); return res.user._id})
+      .then(userId => this.getmyRecipes(userId))
     } else {
-      let userId = window.location.href.split('/').slice(-1)
-      fetch('')
-      .then(res => res.json())
-      .then(json => {
+      let otherUserId = ''
+      otherUserId = window.location.href.split('/').slice(-1).toString()
+      console.log(otherUserId)
+      fetch('api/getUsers/' + otherUserId)
+      // .then(res => res.json())
+      .then(res => {
         this.setState({
-          currentUser: json.user
-        });
-        return json.user.id})
-      .then(user_id => this.userRecipes(user_id))
+        currentUser: res.user,
+      }); return otherUserId})
+      .then(userId => this.getmyRecipes(userId))
     }
   }
 
-
-  userRecipes = (id) => {
-    fetch('')
-    .then(res => res.json())
-    .then(res => this.setState({
-      myRecipes: res.recipes.filter(recipe => recipe.user_id === id)
-    }))
+  getmyRecipes = (userId) => {
+    fetch('api/getRecipes/')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+        myRecipes: res.recipes.filter(recipe => recipe.user === userId)
+        })
+      })
   }
-
-
 
   render() {
     return (

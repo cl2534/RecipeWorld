@@ -55,7 +55,21 @@ router.get("/getUsers", (req, res) => {
   });
 });
 
+router.get("/getUsers/:id", (req, res) => {
+  let userId = req.params.id
+  User.findById(userId, function(err, user) {
+    if (err) return res.json({ success: false, error: err });
+    return res.json({user});
+  })
+})
 
+router.get("/getRecipes/:id", (req, res) => {
+  let recipeId = req.params.id
+  Recipe.findById(recipeId, function(err, recipe) {
+    if (err) return res.json({ success: false, error: err });
+    return res.json({recipe});
+  })
+})
 // newRecipe.save(function(err) {
 //   if (err) return err
 // })
@@ -93,7 +107,6 @@ router.post("/postRecipe", (req, res) => {
       error: "INVALID INPUTS"
     });
   }
-
   recipe.save(err => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true });

@@ -6,7 +6,7 @@ import NewRecipe from './components/NewRecipe.js';
 
 class App extends Component {
   state = {
-    loggedInUserId: 1
+    loggedInUserId: "5c01b2c5f4caaa194b0eee00"
   }
 
   render() {
@@ -18,6 +18,7 @@ class App extends Component {
           <Route path="/recipes" component={HomePage} exact/>
           <Route path="/my-page" render={(props) => <UserPage {...props} userId={this.state.loggedInUserId}/>} exact/>
           <Route path="/newRecipe" render={(props) => <NewRecipe {...props} userId={this.state.loggedInUserId} />} />
+          <Route path="/user" render={(props) => <UserPage {...props} userId={this.state.loggedInUserId}/>} />
         </div>
       </BrowserRouter>
     );

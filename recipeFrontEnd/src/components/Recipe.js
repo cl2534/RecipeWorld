@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import UserPage from './UserPage';
+import User from './User';
 
 export default class Recipe extends Component{
   constructor(props) {
@@ -24,7 +24,7 @@ export default class Recipe extends Component{
       <div className = 'post'>
         <div className = 'post-inner'>
           <div className="flex-container">
-          <UserPage className="user-blurb" userId = {this.props.recipe.user} />
+          <User className="user-blurb" userId = {this.props.recipe.user} />
           </div>
           <div>
             <div className="post-title"> {this.props.recipe.name} </div>

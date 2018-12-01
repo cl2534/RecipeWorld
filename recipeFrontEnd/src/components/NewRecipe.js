@@ -24,7 +24,7 @@ export default class NewRecipe extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    fetch('', {
+    fetch('/postRecipe', {
       method: 'POST',
       headers: {
         'Content-Type':'application/json'
