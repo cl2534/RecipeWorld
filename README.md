@@ -38,7 +38,7 @@ An Example Recipe:
 {
   user: // a reference to a User object
   name: "Breakfast foods",
-  descriptions (steps): "1. Wake up 2. Make breakfast
+  descriptions (steps): "1. Wake up 2. Make breakfast"
   picture_url: "https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg"
 }
 ```
@@ -102,3 +102,5 @@ An Example Recipe:
 3. [tutorial on mlab] (https://docs.mlab.com/)
 4. [tutorial on material-ui] (https://material-ui.com/getting-started/usage/)
 5. [tutorial on semantic-ui React] (https://react.semantic-ui.com/)
+6. [tutorial on MERN Project] (https://blog.cloudboost.io/creating-your-first-mern-stack-application-b6604d12e4d3)
+(https://medium.com/javascript-in-plain-english/full-stack-mongodb-react-node-js-express-js-in-one-simple-app-6cc8ed6de274)
