@@ -1,47 +1,45 @@
 
-___TODO__: 
+___TODO__:
 
-# Recipe World
+# Recipe World (my first MERN Project)
+
+## TO Compile and Run:
+ 1. Node server.js
+ 2. cd recipeFrontEnd & npm install
+ 3. npm start (in recipeFrontEnd directory)
+
+ 4. In any case you are having trouble with "node server.js" command, or if the database is empty, you can find example data in "dataseed.js". Simply uncomment them all, run "node dataseed.js", then repeat step 1~3.  
+
 
 ## Overview
 
-Recipe World is where people share their own recipe along with pictures. After login/sign up, users can make post and "like" other people's recipe. Every week, top 5 "liked" recipes will be shown. They can also see their "liked" recipes in their profile, allowing user to revisit a specific recipe post. Based on the "tags" created in every post, users can search recipes for related menus.   
+Recipe World is where people share their own recipe along with pictures. You can explore other people's recipes and share your recipe by creating your own. All recipes will be rendered as a list of recipes in index page
 
 ## Data Model
 
-The application will store Users, RecipePosts, and Tags
+The application will store Users, Recipes using mongoDB on mlab (https://docs.mlab.com/)
 
 1. users can have multiple recipe posts
-2. each post can have multiple tags
-3. each post can have multiple likes
+2. each post can have one User
 
 
 An Example User:
 
 ```javascript
 {
-  username: "recipeworld",
-  hash: // a password hash,
-  likedRecipe: // an array of references to Likes
+  name: "Chang",
   myRecipe: //an array of reference to Posts
 }
 ```
 
-An Example List with Embedded Items:
+An Example Recipe:
 
 ```javascript
 {
   user: // a reference to a User object
   name: "Breakfast foods",
-  likedRecipe: [
-    { name: "pancakes", recipeId: 1},
-    { name: "ramen", recipeId: 2},
-  ],
-  myRecipe: [
-    { name: "pancakes", recipeId: 1},
-    { name: "ramen", recipeId: 2},
-  ],
-  createdAt: // timestamp
+  descriptions (steps): "1. Wake up 2. Make breakfast
+  picture_url: "https://www.wellplated.com/wp-content/uploads/2017/12/Hoppin-John-recipe-600x629.jpg"
 }
 ```
 
@@ -73,33 +71,34 @@ An Example List with Embedded Items:
 
 ## User Stories or Use Cases
 
-1. as non-registered user, I can register a new account with the site
-2. as a user, I can log in to the site
-3. as a user, I can create my recipe post
-4. as a user, I can view all of my recipe post in my profile
-5. as a user, I can like other people's recipe posts
-6. as a user, I can delete my recipe post
+1. as non-registered user, I (Logged in as Chang) can create recipe post
+2. I can view all of my recipe post in my profile
+3. I can view all recipes created by other users
 
 ## Research Topics
 
-* (2 points) Use a Bootstrap for CSS framework throughout your site
+* (2 points) Use a Semantic-ui & material-ui for CSS framework throughout your site
 
-  * I will try to learn how to implement Bootstrap into my app.
+  * I tried to use both Semantic-ui and material-ui
 
-* (3 points)  Perform client side form validation using custom JavaScript or JavaScript library
+* (3 points) Create a simple MERN project (MongoDB, Express.js, React, Node.js)
 
-  * Errors integrated into DOM
+  * I tried to utilize all the frameworks we learned in class and connect them together.
+  * This was the most time-consuming and could not add more functionality to my website due to lack of time.
+  * Want to work on more functionality after finals.
 
-* (4 points) Using React.js
+* (2 points) Using React.js
 
-  * I have previously learned React.js and want to use it to solidify the concepts
-
+  * I have previously learned React.js and want to use it to solidify the concepts.
 
 ## [Link to Initial Main Project File](app.js)
 
-  * React initial set up is in the folder "recipeworld"
+  * React initial set up is in the folder "recipeFrontEnd"
 
 ## Annotations / References Used
 
-1. [tutorial on React.js](https://reactjs.org/docs/getting-started.html)
-2. [tutorial on bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+1. [tutorial on React](https://reactjs.org/docs/getting-started.html)
+2. [tutorial on Heroku deploy](https://dev.to/smithmanny/deploy-your-react-app-to-heroku-2b6f)
+3. [tutorial on mlab] (https://docs.mlab.com/)
+4. [tutorial on material-ui] (https://material-ui.com/getting-started/usage/)
+5. [tutorial on semantic-ui React] (https://react.semantic-ui.com/)

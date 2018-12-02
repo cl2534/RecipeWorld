@@ -5,8 +5,9 @@ import UserPage from './components/UserPage.js';
 import NewRecipe from './components/NewRecipe.js';
 
 class App extends Component {
+  // STARTS WITH LOGGED IN STATE AS USERNAME "CHANG"
   state = {
-    loggedInUserId: "5c01b2c5f4caaa194b0eee00"
+    loggedInUserId: "5c01b2c5f4caaa194b0eee00" //Chang's ID
   }
 
   render() {

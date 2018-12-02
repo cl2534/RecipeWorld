@@ -11,6 +11,8 @@ const router = express.Router();
 const User = mongoose.model('User');
 const Recipe = mongoose.model('Recipe');
 const MONGODB_URL = "mongodb://cl2534:chfhd156@ds151951.mlab.com:51951/cl2534";
+// I KNOW THIS CREDENTIAL SHOULD NOT BE HERE. IT IS ALSO SAVED IN .ENV. SINCE OUR REPO IS PRIVATE, I WILL JUST USE IT HERE.
+
 // enable sessions
 const session = require('express-session');
 // const sessionOptions = {
