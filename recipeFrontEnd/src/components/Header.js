@@ -1,26 +1,24 @@
-import React, {Component} from 'react';
+import React, {Fragment, Component} from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap';
+import { Menu } from 'semantic-ui-react'
+import { NavLink, withRouter} from 'react-router-dom'
 
-export default class Header extends Component {
-
-  constructor(props) {
-    super(props)
-  }
+const Header = ({location: { pathname } }) => {
 
 //This is the header. Pretty self explanatory. Navbar is a pre built
 //component included in the react-bootstrap library.
-  render() {
     return (
-      <Navbar className="navbar default fixed-top header">
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link className='header-element' to="/"> RecipeWorld </Link>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Link className='header-element' to="/recipes"> Recipes </Link>
-        <Link className='header-element' to="/my-page"> Profile </Link>
-        <Link className='header-element' to="/newRecipe"> Share Recipe </Link>
-      </Navbar>)
+      <Menu pointing secondary>
+          <Menu.Item as={NavLink} to="/recipes" name="Recipe World" active={pathname === '/recipes'} />
+          <Menu.Menu position="right">
+            <br></br>
+            <Menu.Item as={NavLink} to="/my-page" name="Profile" active={pathname === '/my-page'} />
+            <br></br>
+            <Menu.Item as={NavLink} to="/newRecipe" name="Create Recipe" active={pathname === '/newRecipe'} />
+          </Menu.Menu>
+      </Menu>
+    )
   }
-}
+
+export default withRouter(Header);

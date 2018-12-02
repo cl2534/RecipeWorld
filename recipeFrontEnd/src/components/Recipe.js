@@ -35,28 +35,22 @@ const styles = (theme) => ({
 
 class Recipe extends Component{
   constructor(props) {
-    super(props) //recipe
+    super(props)
   }
 
-  // handleLike = () => {
-  //   fetch('', {
-  //     method: 'PATCH',
-  //     headers: {
-  //       'Content-Type':'application/json'
-  //     },
-  //     body: JSON.stringify({likes: this.props.recipe.likes + 1})
-  //   }).then(res => res.json()).then(json => this.setState({
-  //     likes: this.props.post.likes++,
-  //     likedAlready: true
-  //   }))
-  // }
+  renderAvatar = () => {
+    const {classes} = this.props;
+      return (
+        <User userId = {this.props.recipe.user} avatar = {classes.avatar} recipeId = {this.props.recipe._id}/>
+      )
+  }
 
   render() {
     const {classes} = this.props;
     return (
       <Grid item style = {{margin: "auto 8px"}}>
         <Card className={classes.card}>
-          <User className="user-blurb" userId = {this.props.recipe.user} />
+          {this.renderAvatar()}
           <CardActionArea>
           <CardMedia
             component="img"

@@ -1,3 +1,4 @@
+//THIS FILE IS FOR DATA SEED. IN CASE DATABASE IS RESET, RUN NODE DATASEED.JS 
 const User = mongoose.model('User');
 const Recipe = mongoose.model('Recipe');
 const mongoose = require("mongoose");

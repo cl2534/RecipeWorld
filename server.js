@@ -81,6 +81,14 @@ router.get("/getRecipes/:id", (req, res) => {
     return res.json({recipe});
   })
 })
+
+router.delete("/getRecipes", (req, res) => {
+  const { id } = req.body;
+  Recipe.findOneAndDelete(id, err => {
+    if (err) return res.send(err);
+    return res.json();
+  });
+});
 // newRecipe.save(function(err) {
 //   if (err) return err
 // })

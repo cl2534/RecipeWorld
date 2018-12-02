@@ -21,9 +21,7 @@ export default class RecipeContainer extends Component{
   render() {
     return (
       <Grid container justify="space-evenly" direction="row" alignItems = "flex-start" >
-      <div className = 'post-container column'>
         {this.renderRecipe()}
-      </div>
       </Grid>
     )
   }
