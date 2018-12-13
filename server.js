@@ -115,7 +115,7 @@ router.delete("/deleteRecipe", (req, res) => {
   });
 });
 
-// this is our create methid
+// this is our create ㅇhttps://damp-lake-70786.herokuapp.com/
 // this method adds new data in our database
 router.post("/postRecipe", (req, res) => {
   let recipe = new Recipe();
