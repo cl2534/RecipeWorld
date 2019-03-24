@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Image from 'react-image-resizer'
 import CardContent from '@material-ui/core/CardContent';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 const styles = (theme) => ({
   card: {
@@ -24,6 +25,9 @@ const styles = (theme) => ({
   },
   root: {
     width: '100%'
+  },
+  cardContent: {
+    flexGrow: 1,
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -51,24 +55,23 @@ class Recipe extends Component{
           {this.renderAvatar()}
           <CardActionArea>
           <CardMedia
-            component="img"
+            image = {this.props.recipe.picture_url}
             className={classes.media}
             table align = 'center'
           />
-          <Image
-            src= {this.props.recipe.picture_url}
-            height={ 300 }
-            width={ 300 }
-          />
-          <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
+        <CardContent className = {classes.cardContent}>
+          <Typography gutterBottom variant="h5" component="h2">
             {this.props.recipe.name}
           </Typography>
-          <div className="meta">
-            <span className="description"> {this.props.recipe.description}</span>
-            <br />
-          </div>
+          <Typography>
+            {this.props.recipe.description}
+          </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small" color="primary">
+            View Details
+          </Button>
+        </CardActions>
       </CardActionArea>
       </Card>
       </Grid>
