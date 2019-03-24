@@ -12,14 +12,12 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
   card: {
-    maxWidth: 345,
-    padding: 1,
-    display: 'block',
-    margin: '1 2px'
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
   },
   media: { // 16:9
-    objectFit: 'cover',
-
+    paddingTop: '56.25%', // 16:9
   },
   actions: {
     display: 'flex'
