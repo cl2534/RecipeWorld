@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Recipe from './Recipe';
 import Grid from '@material-ui/core/Grid'
-
+import Typography from '@material-ui/core/Typography';
 //container class for posts
-//passes props to Recipe class 
+//passes props to Recipe class
 export default class RecipeContainer extends Component{
   constructor(props) {
     super(props)
@@ -21,9 +21,10 @@ export default class RecipeContainer extends Component{
 
   render() {
     return (
-      <Grid container justify="space-evenly" direction="row" alignItems = "flex-start" >
+      <Grid container spacing={16} justify="center">
         {this.renderRecipe()}
       </Grid>
+
     )
   }
 }
