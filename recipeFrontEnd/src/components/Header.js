@@ -5,7 +5,7 @@ import { Menu } from 'semantic-ui-react'
 import { NavLink, withRouter} from 'react-router-dom'
 
 const Header = ({location: { pathname } }) => {
-
+//Header need to be fiexed.
 //This is the header. Pretty self explanatory. Navbar is a pre built
 //component included in the react-bootstrap library.
     return (

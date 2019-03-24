@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import Recipe from './Recipe';
 import Grid from '@material-ui/core/Grid'
-//container class for posts
 
+//container class for posts
+//passes props to Recipe class 
 export default class RecipeContainer extends Component{
   constructor(props) {
     super(props)

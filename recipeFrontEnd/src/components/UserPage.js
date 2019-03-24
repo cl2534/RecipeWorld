@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './Header';
 import RecipeContainer from './RecipeContainer';
 
+// User's own page. This page will show user's posts. 
 export default class UserPage extends Component {
 
   constructor(props) {

@@ -7,6 +7,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ClearIcon from '@material-ui/icons/Clear'
 import Card from '@material-ui/core/Card';
 
+
+// Individual User. Comes down from UserPage
 export default class User extends Component{
   // state = {}
   constructor(props) {
