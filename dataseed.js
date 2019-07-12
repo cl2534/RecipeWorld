@@ -6,6 +6,9 @@ const Recipe = mongoose.model('Recipe');
 
 
 
+
+
+
 const gingerPeachChicken = new Recipe({
   user: '5c01b2c5f4caaa194b0eee02', //Lily
   name: 'Grilled Ginger-Peach Chicken Breast',
@@ -18,7 +21,7 @@ const gingerPeachChicken = new Recipe({
   ],
   picture_url: 'https://www.allrecipes.com/recipe/274372/grilled-ginger-peach-chicken-breast/photos/6813108/'
 })
-
+gingerPeachChicken.save()
 
 const mexicanSteak = new Recipe({
   user: '5c01b2c5f4caaa194b0eee00', //Chang
@@ -33,7 +36,7 @@ const mexicanSteak = new Recipe({
   ],
   picture_url: 'https://www.allrecipes.com/recipe/47844/grilled-mexican-steak/photos/2254695/'
 })
-
+mexicanSteak.save()
 const yucatanPork = new Recipe({
   user: '5c01b2c5f4caaa194b0eee01', //Peter
   name: 'Yucatan-Style Grilled Pork',
@@ -47,6 +50,18 @@ const yucatanPork = new Recipe({
   ],
   picture_url: 'https://images.media-allrecipes.com/userphotos/720x405/3699662.jpg'
 })
+yucatanPork.save((err, msg) => {
+  if (err) return handleError(err);
+  console.log(msg)
+})
+
+// Recipe.remove(function (err, recipe) {
+//   if (err) return handleError(err);
+//   Recipe.findById('5c01d38cf916561be5d1f0d7', function (err, product) {
+//     console.log(product) // null
+//   })
+// })
+
 //
 // const greekSalad = new Recipe({
 //   user: '5c01b2c5f4caaa194b0eee02', //Lily

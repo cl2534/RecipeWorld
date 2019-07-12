@@ -30,7 +30,7 @@ export default class UserPage extends Component {
     } else {
       let otherUserId = ''
       otherUserId = window.location.href.split('/').slice(-1).toString()
-      console.log(otherUserId)
+      // console.log(otherUserId)
       fetch('api/getUsers/' + otherUserId)
       .then(res => res.json())
       .then(res => {
