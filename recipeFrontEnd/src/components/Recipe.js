@@ -13,12 +13,14 @@ import Button from '@material-ui/core/Button';
 
 const styles = (theme) => ({
   card: {
-    height: '100%',
+    height: '300px',
+    width: '80%',
     display: 'flex',
     flexDirection: 'column',
   },
   media: { // 16:9
     paddingTop: '56.25%', // 16:9
+
   },
   actions: {
     display: 'flex'
@@ -32,7 +34,8 @@ const styles = (theme) => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
-  }
+  },
+
 });
 
 class Recipe extends Component{
@@ -50,21 +53,22 @@ class Recipe extends Component{
   render() {
     const {classes} = this.props;
     return (
+      <div className = "card">
       <Grid item style = {{margin: "auto 8px"}}>
         <Card className={classes.card}>
           {this.renderAvatar()}
           <CardActionArea>
-          <CardMedia
+          <CardMedia table = "true"
             image = {this.props.recipe.picture_url}
             className={classes.media}
-            table align = 'center'
+            
           />
         <CardContent className = {classes.cardContent}>
           <Typography gutterBottom variant="h5" component="h2">
             {this.props.recipe.name}
           </Typography>
-          <Typography>
-            {this.props.recipe.description}
+          <Typography className = 'description'>
+              {this.props.recipe.description}
           </Typography>
         </CardContent>
         <CardActions>
@@ -75,6 +79,7 @@ class Recipe extends Component{
       </CardActionArea>
       </Card>
       </Grid>
+      </div>
     );
   }
 }
