@@ -61,7 +61,6 @@ class Recipe extends Component{
           <CardMedia table = "true"
             image = {this.props.recipe.picture_url}
             className={classes.media}
-            
           />
         <CardContent className = {classes.cardContent}>
           <Typography gutterBottom variant="h5" component="h2">

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Header from './Header';
 import RecipeContainer from './RecipeContainer';
 
-// User's own page. This page will show user's posts. 
+// User's own page. This page will show user's posts.
 export default class UserPage extends Component {
 
   constructor(props) {
@@ -53,14 +53,13 @@ export default class UserPage extends Component {
 
   render() {
     return (
-          <div className="black">
-            <Header />
-            <br />
+      <div className="black">
+        <Header />
+          <br/>
             <div className="flex-container">
-              <br />
-              <RecipeContainer recipes={this.state.myRecipes}/>
+                <RecipeContainer recipes={this.state.myRecipes}/>
             </div>
-          </div>
+      </div>
         )
   }
 }

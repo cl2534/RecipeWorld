@@ -11,6 +11,7 @@ const RecipeSchema = new mongoose.Schema({
   user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
   name: {type: String, required: true},
   description: {type: String, required: true},
+  method: {type: Array, required: true},
   picture_url: {type: String, required: true}
 })
 

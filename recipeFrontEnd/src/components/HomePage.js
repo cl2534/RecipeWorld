@@ -42,16 +42,16 @@ export default class HomePage extends Component {
             You'll find personal tips, feedbacks, and directions for each recipes so you can enjoy your home cooking easily.
           </Typography>
           <Grid container spacing={16} justify="center">
-              <Grid item>
-                <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary">
                   Share Your Recipe
-                </Button>
-              </Grid>
+              </Button>
           </Grid>
           <br/>
-        <div className="flex-container">
+          <br/>
+          <br/>
+          <br/>
           <RecipeContainer recipes = {this.state.recipes}/>
-        </div>
+
       </div>
     )
   }
