@@ -1,10 +1,10 @@
 //THIS FILE IS FOR DATA SEED. IN CASE DATABASE IS RESET, RUN NODE DATASEED.JS
-require('./db');
+
 const mongoose = require("mongoose");
 const User = mongoose.model('User');
 const Recipe = mongoose.model('Recipe');
 
-
+require('./db');
 
 
 
@@ -19,7 +19,7 @@ const gingerPeachChicken = new Recipe({
     "Preheat an outdoor grill for medium-high heat and lightly oil the grate.",
     "Place chicken on preheated grill over indirect heat, cover, and grill until chicken is browned and cooked through, about 30 minutes."
   ],
-  picture_url: 'https://www.allrecipes.com/recipe/274372/grilled-ginger-peach-chicken-breast/photos/6813108/'
+  picture_url: 'https://images.media-allrecipes.com/userphotos/600x600/6813108.jpg'
 })
 gingerPeachChicken.save()
 
@@ -34,13 +34,13 @@ const mexicanSteak = new Recipe({
     "Preheat an outdoor grill for high heat and lightly oil grate.",
     "Remove the meat from the marinade and discard the remaining marinade. Cook on high, 1 to 2 minutes per side, to sear the meat. Turn the heat down to low and cook for an additional 3 to 4 minutes per side, or until the it has reached the desired doneness."
   ],
-  picture_url: 'https://www.allrecipes.com/recipe/47844/grilled-mexican-steak/photos/2254695/'
+  picture_url: 'https://images.media-allrecipes.com/userphotos/600x600/2254695.jpg'
 })
 mexicanSteak.save()
 const yucatanPork = new Recipe({
-  user: '5c01b2c5f4caaa194b0eee01', //Peter
-  name: 'Yucatan-Style Grilled Pork',
-  description: 'It has vibrant citrus/chile flavors and a beautiful orange hue from ground annatto.',
+  user: "5c01b2c5f4caaa194b0eee01", //Peter
+  name: "Yucatan-Style Grilled Pork",
+  description: "It has vibrant citrus/chile flavors and a beautiful orange hue from ground annatto.",
   method: [
     "Place orange juice, lemon juice, and lime juice in a bowl. Add garlic, kosher salt, annatto powder, chipotle powder, ground cumin, cayenne, oregano, and black pepper. Whisk until well blended.",
     "Cut the tenderloins in half crosswise; cut each piece in half lengthwise. Place pieces in marinade and thoroughly coat with the mixture. Cover with plastic wrap with the wrap touching the surface of the meat and marinade. (Or transfer mixture to a resealable plastic bag.) Refrigerate 4 to 6 hours.",
@@ -48,12 +48,117 @@ const yucatanPork = new Recipe({
     "Preheat an outdoor grill for medium-high heat and lightly oil the grate.",
     "Place pieces evenly spaced on a hot grill. Allow meat to sear onto the grate until pieces can be easily turned, 4 or 5 minutes. Turn and grill on the other side another 4 or 5 minutes. An instant-read thermometer inserted into the center should read 135 to 140 degrees F (63 degrees C). Transfer onto a serving platter and allow meat to rest about 5 minutes before serving."
   ],
-  picture_url: 'https://images.media-allrecipes.com/userphotos/720x405/3699662.jpg'
+  picture_url: "https://images.media-allrecipes.com/userphotos/720x405/3699662.jpg"
 })
-yucatanPork.save((err, msg) => {
-  if (err) return handleError(err);
-  console.log(msg)
+
+
+const spicyShrimp = new Recipe({
+  user: "5d2f6901e7179a26a971daa5", //Jack
+  name: "Spicy Grilled Shrimp",
+  description: "So fast and easy to prepare, these shrimp are destined to be the hit of any barbeque.",
+  method: [
+    "Preheat grill for medium heat.",
+    "In a small bowl, crush the garlic with the salt. Mix in cayenne pepper and paprika, and then stir in olive oil and lemon juice to form a paste. In a large bowl, toss shrimp with garlic paste until evenly coated.",
+    "Lightly oil grill grate. Cook shrimp for 2 to 3 minutes per side, or until opaque. Transfer to a serving dish, garnish with lemon wedges, and serve."
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/600x600/1384969.jpg"
 })
+
+const crabCakes = new Recipe({
+  user: "5c01b2c5f4caaa194b0eee00", //Chang
+  name: "Best Ever Crab Cakes",
+  description: "Serve with coarse mustard on the plate or your favorite mustard sauce.",
+  method: [
+    "In a medium bowl, whisk together egg, mayonnaise, lemon juice, red pepper flakes, tarragon, and scallions.",
+    "Gently stir in crabmeat, being careful not to break up meat. Gradually mix in cracker crumbs, adding until desired consistency is achieved.",
+    "Heat butter in a skillet over medium heat. Form crab mixture into 4 patties.",
+    "Place patties in skillet, and cook until golden brown, about 5 to 6 minutes on each side."
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/720x405/5103019.jpg"
+})
+
+const mexicanCorn = new Recipe({
+  user: "5c01b2c5f4caaa194b0eee01", //Peter
+  name: "Mexican Grilled Corn",
+  description: " The way the mild, subtly salted cheese works with an ancho-lime mayonnaise, along with that buttery, smoky corn, is a magnificent combination of flavors.",
+  method: [
+    "Preheat an outdoor grill for high heat and lightly oil the grate.",
+    "Combine mayonnaise, lime juice, ancho chile powder, and smoked paprika in a bowl; whisk until smooth.",
+    "Bring a large pot of salted water to a boil. Boil corn in the salted water for 5 minutes.",
+    "Place ears of corn on hot grill and cook until the kernels begin to brown and caramelize, 2 to 3 minutes.",
+    "Turn the corn and continue to cook, turning ears after 1 to 2 minutes, until they are browned with slightly charred, caramelized spots.",
+    "Generously brush corn with melted butter and ancho-lime mayonnaise until kernels are coated."
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/600x600/4814257.jpg"
+})
+
+const zucchiniLasagna = new Recipe({
+  user: "5c01b2c5f4caaa194b0eee02", //Peter
+  name: "Zucchini Lasagna",
+  description: "This lasagna is perfect in the summer with your garden-fresh veggies and herbs, or in the winter when you need a comforting meal.",
+  method: [
+    "Slice zucchini lengthwise into very thin slices. Sprinkle slices lightly with salt; set aside to drain in a colander.",
+    "To prepare the meat sauce, cook and stir ground beef and black pepper in a large skillet over medium high heat for 5 minutes.",
+    "Add in green pepper and onion; cook and stir until meat is no longer pink. Stir in tomato paste, tomato sauce, wine, basil, and oregano, adding a small amount of hot water if sauce is too thick.",
+    "To assemble lasagna, spread 1/2 of the meat sauce into the bottom of prepared pan. Then layer 1/2 the zucchini slices, 1/2 the ricotta mixture, all of the spinach, followed by all of the mushrooms, then 1/2 the mozzarella cheese.",
+    "Bake for 45 minutes. Remove foil; raise oven temperature to 350 degrees F (175 degrees C), and bake an additional 15 minutes."
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/720x405/6287281.jpg"
+})
+
+const macaroniSalad = new Recipe({
+  user: "5d2f6901e7179a26a971daa5", //Jack
+  name: "Macaroni Salad",
+  description: "this deli-style macaroni salad will always be a crowd favorite, as long as you pay attention to a few key details.",
+  method: [
+    "Whisk 1 cup mayonnaise, vinegar, Dijon mustard, salt, black pepper, and cayenne pepper together in a bowl until well blended.",
+    "Stir in celery, red bell pepper, carrot, onions, and jalapeno and poblano peppers.",
+    "Cook elbow macaroni in the boiling water, stirring occasionally until cooked through, 8 to 10 minutes.",
+    "Allow macaroni to drain in a colander about 5 minutes, shaking out moisture from time to time",
+    "Pour dressing over macaroni and stir until dressing is evenly distributed."
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/720x405/2343032.jpg"
+})
+
+const bigMac = new Recipe({
+  user: "5c01b2c5f4caaa194b0eee00", //Chang
+  name: "Big Mac® Clone",
+  description: "A very delicious, authentic, and most importantly great clone of a Big Mac® from McDonald's®.",
+  method: [
+    "Shape ground beef into 4 flat patties that will fit the hamburger buns. Place them on a tray lined with waxed paper.",
+    "Mix mayonnaise, mustard, pickle relish, white wine vinegar, onion powder, garlic powder, and paprika in a bowl to make sauce.",
+    "Preheat a large skillet over medium heat. Toast buns in batches until lightly golden, 1 to 2 minutes.",
+    "Layer some of the sauce, 1 tablespoon minced onion, 2 tablespoons lettuce, and pickles on 2 bottom buns.",
+    "Layer some of the sauce and remaining 1 tablespoon minced onion, 2 tablespoons lettuce, and American cheese on the other bottom buns.",
+    "Cook in the hot skillet 2 at a time until browned, 3 to 4 minutes per side."
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/560x315/4313539.jpg"
+})
+
+const carrotSalad = new Recipe({
+  user: "5c01b2c5f4caaa194b0eee00", //Chang
+  name: "Sweet Carrot Salad",
+  description: "Great for a BBQ or a pot luck and best when left to sit for an hour to let flavors meld."",
+  method: [
+    "In a large bowl, mix together the carrots, pineapple and raisins.",
+    "Stir in the honey, mayonnaise and lemon juice until evenly coated.",
+    "Refrigerate for at least 30 minutes before serving to let the flavors meld.",
+  ],
+  picture_url: "https://images.media-allrecipes.com/userphotos/560x315/2457392.jpg"
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Recipe.remove(function (err, recipe) {
 //   if (err) return handleError(err);
@@ -61,85 +166,6 @@ yucatanPork.save((err, msg) => {
 //     console.log(product) // null
 //   })
 // })
-
-//
-// const greekSalad = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee02', //Lily
-//   name: 'Greek Salad',
-//   description: 'Combine first five ingredients. Toss with olive oil and vinegar, and add salt and pepper to taste.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/greeksalad.jpg'
-// })
-//
-// const bagel = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee03', //Lucy
-//   name: 'Breakfast Bagel',
-//   description: 'Bring water and 1 tsp vinegar to a light boil in a shallow pan. Make sure there is enough water to cover egg.While water is coming to a boil, slice bagel in half and toast.Place tomato, avocado, and cheese on top of toasted bagel. poach eggs, crack into water and cook about 5 minutes, just until the white is set and the yolk has filmed over. Remove with slotted spoon. Place on top of bagel. Season with salt and pepper to taste. Serve open faced.',
-//   picture_url: 'https://tmbidigitalassetsazure.blob.core.windows.net/secure/RMS/attachments/37/1200x1200/Ham---Cheese-Bagels_exps33050_SD2232457B08_18_3b_RMS.jpg'
-// })
-//
-// const oatmeal = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee00', //Chang
-//   name: '10-Minute Energizing Oatmeal',
-//   description: 'Bring the water and salt to a boil in a saucepan, then turn the heat to low and add the oats.Cook for about 5 minutes, stirring regularly so that the oatmeal will not clump together. Add cinnamon, raisins and almonds, stir, cover the pan and turn off heat. Let sit for 5 minutes. Serve with milk and sweetener.',
-//   picture_url: 'https://img1.cookinglight.timeinc.net/sites/default/files/styles/medium_2x/public/1515172142/1801w-basic-oatmeal-recipe.jpg?itok=1Xp6xEkU'
-// })
-//
-// const poachedEgg = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee01', //Peter
-//   name: 'Poached Egg over Spinach and Mushroom',
-//   description: 'Heat broth in a 10-12 inch stainless steel skillet. Healthy Sauté mushrooms for 4 minutes over medium heat stirring frequently.Add the spinach and stir for 1 minute. Toss with Mediterranean Dressing and top with two poached eggs.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/poachedeggsspinachmushrooms.jpg'
-// })
-//
-// const grapefruitSunrise = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee02', //Lily
-//   name: 'Grapefruit Sunrise',
-//   description: 'Place grapefruit juice, orange juice, 1 cup strawberries, and honey in blender and blend until smooth. Strain into 2 chilled glasses.Top with grapefruit sections and sliced strawberries.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/grapefruitsunrise.jpg'
-// })
-//
-// const blueberryTrifle = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee03', //Lucy
-//   name: 'Blueberry Trifle',
-//   description: 'Divide blueberries into two bowls. Top each with 1/2 half of the carton of yogurt. Top with shaved chocolate or chocolate pieces.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/blueberrytruffle.jpg'
-// })
-//
-// const steamedSalmon = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee00', //Chang
-//   name: 'Steamed Salmon and Asparagus with Mustard Dill Sauce',
-//   description: 'Bring 2 inches of lightly salted water to a boil in a steamer with a tight fitting lid. While water is coming to a boil, put all sauce ingredients except olive oil in a blender and begin to blend on high speed for about one minute. While blender is running, drizzle olive oil in a little at a time. Set aside. Snap off tough asparagus ends. When water is at a full boil place asparagus in steamer basket, cover, and cook until asparagus is tender, about 3-5 minutes, depending on thickness. Remove from steamer, toss with 1 TBS lemon juice, 1 TBS olive oil, salt and pepper. Rub salmon with 1 TBS lemon juice and season with a little salt and pepper. Place salmon in the same steamer basket and steam until pink inside, about 3-4 minutes. Place salmon on a plate and pour desired amount of sauce over it and the asparagus.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/steamedsalmonasparagus.jpg'
-// })
-//
-//
-// const pastaClams = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee03', //Lucy
-//   name: 'Pasta with Clams',
-//   description: 'Bring water to a boil and cook pasta according to package instructions. While water is coming to a boil and pasta is cooking, heat 1 TBS broth over medium heat in a 10-12 inch stainless steel skillet. Healthy Sauté onion in broth for about 4 minutes stirring frequently. Add tomato paste and diced tomatoes. Cook for another 10 minutes on high heat to reduce and intensify sauce. Add clams and cook for another 2 minutes. Add pressed garlic, chopped basil, olive oil, salt, pepper and chili flakes. Remove from heat immediately and toss with cooked, drained pasta.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/pastaclams.jpg'
-// })
-//
-// const lamb = new Recipe({
-//   user: '5c01b2c5f4caaa194b0eee00', //Chang
-//   name: 'Roast Leg of Lamb',
-//   description: 'Cut off excess fat from leg of lamb. Lay leg of lamb out flat in glass baking dish. Press garlic and chop rosemary. Rub leg with both making sure you get it into the crevices. Pour fresh lemon juice over lamb and sprinkle with salt. Cover and refrigerate overnight. Preheat the oven to 425°F (218°C). Cut vegetables and place around lamb in baking dish. Sprinkle with pepper. Roast lamb and vegetables for about 15 minutes, then turn the heat down to 350°F (177°C). After about 20 minutes, check the internal temperature of the lamb with an instant reading meat thermometer. Continue to check in thickest part of leg every 5 minutes until internal temperature reaches 130°F (55°C) for medium rare. Let it rest for a few minutes before carving. Serve with vegetables and pan juices.',
-//   picture_url: 'http://www.whfoods.com/recipeimages/roastlegoflamb.jpg'
-// })
-
-// Recipes List
-// pastaClams.save()
-// lamb.save()
-// steamedSalmon.save()
-// blueberryTrifle.save()
-// grapefruitSunrise.save()
-// poachedEgg.save()
-// oatmeal.save()
-// bagel.save()
-// greekSalad.save()
-// clamChowder.save()
-// blackberryTart.save()
-// asianChicken.save()
 
 // Recipe.remove(function (err, recipe) {
 //   if (err) return handleError(err);
@@ -210,7 +236,7 @@ yucatanPork.save((err, msg) => {
 //   user.myRecipes.push('5c01d61f540c081c10f55414')
 //   user.save()
 // })
-
+// console.log('hi')
 
 // Chang.save()
 // Peter.save()

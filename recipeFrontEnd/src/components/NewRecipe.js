@@ -10,15 +10,22 @@ export default class NewRecipe extends Component {
         userId: props.userId,
         name: "",
         picture_url: "",
+        method: [],
         description: "",
       }
   }
 
 //every time a new character is entered, its value is stored into the components state.
   handleChange = (event) => {
-    this.setState({
-      [event.target.name] : event.target.value
-    })
+    if (event.target.name = "method") {
+      this.setState({
+        method: this.state.method.concat(event.target.value)
+      })
+    } else {
+      this.setState({
+        [event.target.name] : event.target.value
+      })
+    }
   }
 
 
@@ -44,9 +51,14 @@ export default class NewRecipe extends Component {
             <label>Recipe Name: </label> <br />
             <input type="text" name="name" size="73" value={this.state.name} onChange={this.handleChange} maxlength="100"/>
             <br /> <br />
-            <label>Recipe Steps: </label> <br />
+
+            <label>Recipe Description: </label> <br />
             <input class = "textbox" type="text" name="description" size="73" value={this.state.description} onChange={this.handleChange} maxlength="200"/>
             <br /> <br />
+
+            <label> Method: </label> <br />
+            <input type="URL" name="method" size = "100" value={this.state.method} onChange={this.handleChange} maxlength="200"/>
+            <br /> <br/>
             <label> Image URL: </label> <br />
             <input type="URL" name="picture_url" size="73" value={this.state.picture_url} onChange={this.handleChange} maxlength="200"/>
             <br /> <br />

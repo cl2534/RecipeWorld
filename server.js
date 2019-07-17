@@ -140,6 +140,7 @@ app.use("/api", router);
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+module.exports = app
 // app.get('/', (req, res) => {
 //   res.render('index');
 // });
