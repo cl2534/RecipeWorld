@@ -29,11 +29,15 @@ export default class HomePage extends Component {
   render() {
     return (
       <div className="black">
-        <Header />
+          <Header/>
+            <br/>
+              <br/>
+            <br/>
         <br/>
         <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
           Welcome to Recipe World
         </Typography>
+
           <Typography variant="h6" align="center" color="textSecondary" paragraph>
             Do you love cooking?
             <br/>
@@ -46,6 +50,7 @@ export default class HomePage extends Component {
                   Share Your Recipe
               </Button>
           </Grid>
+          <br/>
           <br/>
           <br/>
           <br/>

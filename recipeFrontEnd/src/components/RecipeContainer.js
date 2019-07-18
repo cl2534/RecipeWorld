@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
 import Recipe from './Recipe';
-import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles, Theme, withStyles } from '@material-ui/core/styles';
+import Grid, { GridSpacing } from '@material-ui/core/Grid';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import Radio from '@material-ui/core/Radio';
+import Paper from '@material-ui/core/Paper';
+import { withRouter } from "react-router-dom";
+
+
 
 //container class for posts
 //passes props to Recipe class
@@ -16,7 +24,7 @@ export default class RecipeContainer extends Component{
   renderRecipe = () => {
     return this.props.recipes.map(recipe => {
       return (
-    <Grid item key = {recipe._id} sm={6} md={4} lg={3}>
+    <Grid item xs = {4} zeroMinWidth container spacing = {5} key = {recipe._id}>
       <Recipe recipe={recipe} key={recipe.id}/>
     </Grid>
     )}
@@ -25,6 +33,7 @@ export default class RecipeContainer extends Component{
 
 
   render() {
+
     return (
       <Grid container spacing={40} justify="center">
         {this.renderRecipe()}
