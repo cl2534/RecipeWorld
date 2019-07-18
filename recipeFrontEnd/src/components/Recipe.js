@@ -19,7 +19,7 @@ import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 // import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-
+import User from "./User"
 import { withRouter } from "react-router-dom";
 
 const styles = theme => ({
@@ -60,10 +60,39 @@ class Recipe extends React.Component {
     super(props)
     this.state = {
       expanded: false,
-      anchorEl: null
+      anchorEl: null,
+      currentUser: ""
     };
   }
+  componentDidMount() {
+    this.fetchUser()
+  }
 
+  fetchUser = () => {
+    fetch(`api/getUsers/` + this.props.recipe.user)
+    .then(res => res.json())
+    .then(res => this.setState({
+      currentUser: res.user
+    }))
+  }
+
+  handleExpandClick = () => {
+    this.setState(state => ({ expanded: !state.expanded }));
+  };
+  handleOpenPostMenu = e => {
+   e.stopPropagation();
+   this.setState({ anchorEl: e.currentTarget });
+  };
+
+ handleClosePostMenu = e => {
+   this.setState({ anchorEl: null });
+ };
+
+ handleDeletePost = e => {
+   e.stopPropagation();
+   this.props.deletePostAction(this.props._id, this.props.history);
+   this.setState({ anchorEl: null });
+ };
   // renderAvatar = () => {
   //   const {classes} = this.props;
   //     return (
@@ -75,64 +104,47 @@ class Recipe extends React.Component {
   const { classes } = this.props;
   const { anchorEl } = this.state;
 
+
   return (
+
     <React.Fragment>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={this.handleClosePostMenu}
-      >
-        <MenuItem onClick={this.handleDeletePost}>Delete Post</MenuItem>
-        <MenuItem onClick={this.handleAddFriend}>Add Friend</MenuItem>
-        {/* <MenuItem onClick={this.handleFollowPost}>Follow Post</MenuItem> */}
-      </Menu>
       <Card className={classes.card}>
-        <CardActionArea
-          className={classes.card}
-          onClick={this.handleCardArea}
-        >
+        <CardActionArea>
           <CardHeader
-            avatar={
-              <Avatar aria-label="Post" className={classes.avatar}>
-                R
-              </Avatar>
-            }
+            avatar= {
+                    <Avatar aria-label="Post" className={classes.avatar}>
+                      {this.state.currentUser.name}
+                    </Avatar> }
             action={
-              <IconButton>
+              <IconButton> {/*Need to add delete function.*/}
                 <MoreVertIcon
                   aria-owns={anchorEl ? "simple-menu" : null}
                   aria-haspopup="true"
-                  onClick={this.handleOpenPostMenu}
+                  onClick={this.handleDeletePost}
                 />
               </IconButton>
             }
-            title= "hi"
+            title= {this.props.recipe.name}
           />
-          {this.props.imgUrl ? (
+        {this.props.recipe.picture_url ? (
             <CardMedia
               className={classes.media}
-              image={this.props.picture_url}
-              title="Dogs"
+              image={this.props.recipe.picture_url}
+              title= {this.props.recipe.name}
             />
           ) : null}
           <CardContent>
             <Typography component="p">
-
-              "hi"
+              {this.props.recipe.description}
             </Typography>
-            <Typography component="p">
 
-            </Typography>
           </CardContent>
+
         </CardActionArea>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Comment" >
-
-          </IconButton>
-          <IconButton aria-label="Like" >
-            <FavoriteIcon/>
-          </IconButton>
+          <Typography variant = "subtitle2" gutterBottom>
+            Created By {this.state.currentUser.name}
+          </Typography>
           {/* TODO: stretch goal share feature
           <IconButton aria-label="Share">
           <ShareIcon />

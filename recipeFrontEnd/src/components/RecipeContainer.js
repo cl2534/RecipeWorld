@@ -24,7 +24,7 @@ export default class RecipeContainer extends Component{
   renderRecipe = () => {
     return this.props.recipes.map(recipe => {
       return (
-    <Grid item xs = {4} zeroMinWidth container spacing = {5} key = {recipe._id}>
+    <Grid item xs = {4} zeroMinWidth container spacing = {8} key = {recipe._id}>
       <Recipe recipe={recipe} key={recipe.id}/>
     </Grid>
     )}

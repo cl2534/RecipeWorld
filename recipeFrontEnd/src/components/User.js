@@ -31,9 +31,9 @@ export default class User extends Component{
 
   render() {
     return (
-      <div className = 'user'>
-        Written By Chef: {this.state.currentUser.name}
-      </div>
+      <div>
+        {this.state.currentUser.name.charAt(0)}
+        </div>
     )
   }
 }
