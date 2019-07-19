@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import { Form } from 'semantic-ui-react'
+import Typography from '@material-ui/core/Typography';
+import { Button } from 'semantic-ui-react'
+
 
 export default class NewRecipe extends Component {
 
@@ -39,33 +43,63 @@ export default class NewRecipe extends Component {
       body: JSON.stringify({...this.state})
     }).then(res => res.json()).then(json => this.props.history.push('/'))
   }
-
+  // <div className="form-container black">
+  //   <Header />
+  //   <br />
+  //   <div className="create-post-form">
+  //     <form onSubmit={this.handleSubmit}>
+  //       <label>Recipe Name: </label> <br />
+  //       <input type="text" name="name" size="73" value={this.state.name} onChange={this.handleChange} maxlength="100"/>
+  //       <br /> <br />
+  //
+  //       <label>Recipe Description: </label> <br />
+  //       <input class = "textbox" type="text" name="description" size="73" value={this.state.description} onChange={this.handleChange} maxlength="200"/>
+  //       <br /> <br />
+  //
+  //       <label> Method: </label> <br />
+  //       <input type="URL" name="method" size = "100" value={this.state.method} onChange={this.handleChange} maxlength="200"/>
+  //       <br /> <br/>
+  //       <label> Image URL: </label> <br />
+  //       <input type="URL" name="picture_url" size="73" value={this.state.picture_url} onChange={this.handleChange} maxlength="200"/>
+  //       <br /> <br />
+  //       <input type="submit" bsStyle="info" value="Submit" />
+  //     </form>
+  //   </div>
+  // </div>
 //TODO: make form even prettier.
   render() {
     return (
-      <div className="form-container black">
-        <Header />
-        <br />
-        <div className="create-post-form">
-          <form onSubmit={this.handleSubmit}>
-            <label>Recipe Name: </label> <br />
-            <input type="text" name="name" size="73" value={this.state.name} onChange={this.handleChange} maxlength="100"/>
-            <br /> <br />
+      <Form>
+      <Header/>
 
-            <label>Recipe Description: </label> <br />
-            <input class = "textbox" type="text" name="description" size="73" value={this.state.description} onChange={this.handleChange} maxlength="200"/>
-            <br /> <br />
+        <br/>
+        <br/>
+        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+          Share Your Recipe
+        </Typography>
+        <br/>
+        <br/>
 
-            <label> Method: </label> <br />
-            <input type="URL" name="method" size = "100" value={this.state.method} onChange={this.handleChange} maxlength="200"/>
-            <br /> <br/>
-            <label> Image URL: </label> <br />
-            <input type="URL" name="picture_url" size="73" value={this.state.picture_url} onChange={this.handleChange} maxlength="200"/>
-            <br /> <br />
-            <input type="submit" bsStyle="info" value="Submit" />
-          </form>
-        </div>
-      </div>
+        <Form.Group widths='equal'>
+
+          <Form.Input fluid label='Recipe Name' placeholder='Recipe Name' />
+          <Form.Input fluid label='Feedbacks' placeholder='Feedbacks' />
+        </Form.Group>
+
+        <Form.TextArea label='Methods' placeholder='List your methods here.' />
+        <Form.Input fluid label='Picture Url' placeholder='Copy your picture url here.' />
+          <Form.Field label='Upload picture' control='button'>
+            Select
+          </Form.Field>
+          <br/>
+          <Button primary attached = "bottom">Share</Button>
+      </Form>
     )
   }
 }
+
+// userId: props.userId,
+// name: "",
+// picture_url: "",
+// method: [],
+// description: "",
