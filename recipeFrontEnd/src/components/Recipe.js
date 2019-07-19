@@ -88,11 +88,7 @@ class Recipe extends React.Component {
    this.setState({ anchorEl: null });
  };
 
- handleDeletePost = e => {
-   e.stopPropagation();
-   this.props.deletePostAction(this.props._id, this.props.history);
-   this.setState({ anchorEl: null });
- };
+
   // renderAvatar = () => {
   //   const {classes} = this.props;
   //     return (
@@ -103,7 +99,6 @@ class Recipe extends React.Component {
   render() {
   const { classes } = this.props;
   const { anchorEl } = this.state;
-
 
   return (
 
@@ -143,17 +138,13 @@ class Recipe extends React.Component {
         </CardActionArea>
         <CardActions className={classes.actions} disableActionSpacing>
           <Typography variant = "subtitle2" gutterBottom>
-            Created By {this.state.currentUser.name}
+            Posted By {this.state.currentUser.name}
           </Typography>
-          {/* TODO: stretch goal share feature
-          <IconButton aria-label="Share">
-          <ShareIcon />
-        </IconButton> */}
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded
             })}
-
+            onClick={this.handleExpandClick}
             aria-expanded={this.state.expanded}
             aria-label="Show more"
           >
@@ -163,7 +154,9 @@ class Recipe extends React.Component {
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph variant="body2">
-              {this.props.comments ? this.props.comments.length : 0} Comments
+              <Typography variant = "h6"> Methods </Typography>
+              <br/>
+              <Typography variant = "subtitle1">{this.props.recipe.method ? this.props.recipe.method : " Not Listed"} </Typography>
             </Typography>
 
           </CardContent>
@@ -173,4 +166,7 @@ class Recipe extends React.Component {
   );
 }
 }
+Recipe.propTypes = {
+  classes: PropTypes.object.isRequired
+};
 export default withRouter((withStyles(styles)(Recipe)));
