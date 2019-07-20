@@ -49,6 +49,7 @@ export default class HomePage extends Component {
             <br/>
             You'll find personal tips, feedbacks, and directions for each recipes so you can enjoy your home cooking easily.
           </Typography>
+          <br/>
           <Grid container spacing={16} justify="center">
               <Button variant="contained" color="primary" onChange = {this.handleShareButton}>
                   Share Your Recipe

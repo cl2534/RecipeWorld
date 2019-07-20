@@ -61,6 +61,7 @@ router.post('/getRecipes', function(req, res) {
   Recipe.create({
     user: req.body.userId,
     name: req.body.name,
+    method: req.body.method,
     description: req.body.description,
     picture_url: req.body.picture_url
   }).then(recipe => {

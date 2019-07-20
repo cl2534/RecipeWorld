@@ -14,7 +14,7 @@ export default class NewRecipe extends Component {
         userId: props.userId,
         name: "",
         picture_url: "",
-        method: [],
+        method: "",
         description: "",
       }
   }
