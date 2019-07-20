@@ -16,6 +16,10 @@ export default class HomePage extends Component {
     this.fetchPosts()
   }
 
+  handleShareButton = () => {
+    this.props.history.push('/newRecipe')
+  }
+
   fetchPosts = () => {
     fetch('api/getRecipes')
     .then(res => res.json())
@@ -46,7 +50,7 @@ export default class HomePage extends Component {
             You'll find personal tips, feedbacks, and directions for each recipes so you can enjoy your home cooking easily.
           </Typography>
           <Grid container spacing={16} justify="center">
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" onChange = {this.handleShareButton}>
                   Share Your Recipe
               </Button>
           </Grid>

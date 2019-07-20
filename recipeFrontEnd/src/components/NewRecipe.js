@@ -21,16 +21,18 @@ export default class NewRecipe extends Component {
 
 //every time a new character is entered, its value is stored into the components state.
   handleChange = (event) => {
+    console.log(event.target.name, event.target.value)
+    event.preventDefault()
     if (event.target.name = "method") {
       this.setState({
-        method: this.state.method.concat(event.target.value)
-      })
-    } else {
-      this.setState({
-        [event.target.name] : event.target.value
+        method: [event.target.value]
       })
     }
+    this.setState({
+      [event.target.name] : event.target.value
+    })
   }
+
 
 
   handleSubmit = (event) => {
@@ -70,29 +72,26 @@ export default class NewRecipe extends Component {
   render() {
     return (
       <Form>
-      <Header/>
-
-        <br/>
-        <br/>
-        <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-          Share Your Recipe
-        </Typography>
-        <br/>
-        <br/>
-
-        <Form.Group widths='equal'>
-
-          <Form.Input fluid label='Recipe Name' placeholder='Recipe Name' />
-          <Form.Input fluid label='Feedbacks' placeholder='Feedbacks' />
-        </Form.Group>
-
-        <Form.TextArea label='Methods' placeholder='List your methods here.' />
-        <Form.Input fluid label='Picture Url' placeholder='Copy your picture url here.' />
-          <Form.Field label='Upload picture' control='button'>
-            Select
-          </Form.Field>
+        <Header/>
           <br/>
-          <Button primary attached = "bottom">Share</Button>
+          <br/>
+            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              Share Your Recipe
+            </Typography>
+          <br/>
+          <br/>
+            <Form.Group widths='equal'>
+              <Form.Input fluid label='Recipe Name' value={this.state.name} onChange={this.handleChange} placeholder='Recipe Name' />
+              <Form.Input fluid label='Feedbacks' value={this.state.description} onChange={this.handleChange} name = "description" placeholder='Feedbacks' />
+            </Form.Group>
+            <Form.TextArea label='Methods' name = "methods" placeholder='List your methods here.' value={this.state.method} onChange={this.handleChange} />
+            <Form.Input fluid label='Picture Url' name = "picture_url" placeholder='Copy your picture url here.'
+              value={this.state.picture_url} onChange={this.handleChange}/>
+            <Form.Field label='Upload picture' control='button'>
+              Select
+            </Form.Field>
+            <br/>
+          <Button primary attached = "bottom" onClick = {this.handleSubmit} >Share</Button>
       </Form>
     )
   }
