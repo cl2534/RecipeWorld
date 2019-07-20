@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import RecipeContainer from './RecipeContainer';
-
+import Typography from '@material-ui/core/Typography';
 // User's own page. This page will show user's posts.
 export default class UserPage extends Component {
 
@@ -53,13 +53,17 @@ export default class UserPage extends Component {
 
   render() {
     return (
-      <div className="black">
+      <React.Fragment>
         <Header />
+        <br/>
+        <br/>
+          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom> My Recipes </Typography>
+          <br/>
           <br/>
             <div className="flex-container">
                 <RecipeContainer recipes={this.state.myRecipes}/>
             </div>
-      </div>
+      </React.Fragment>
         )
   }
 }

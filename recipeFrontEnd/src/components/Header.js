@@ -13,7 +13,7 @@ const Header = ({location: { pathname } }) => {
           <Menu.Item as={NavLink} to="/recipes" name="Recipe World" active={pathname === '/recipes'} />
           <Menu.Menu position="right">
             <br></br>
-            <Menu.Item as={NavLink} to="/my-page" name="Profile" active={pathname === '/my-page'} />
+            <Menu.Item as={NavLink} to="/my-page" name="My Recipes" active={pathname === '/my-page'} />
             <br></br>
             <Menu.Item as={NavLink} to="/newRecipe" name="Create Recipe" active={pathname === '/newRecipe'} />
           </Menu.Menu>

@@ -81,7 +81,7 @@ export default class NewRecipe extends Component {
               <Form.Input fluid label='Recipe Name' name = "name" value={this.state.name} onChange={this.handleChange} placeholder='Recipe Name' />
               <Form.Input fluid label='Feedbacks' value={this.state.description} onChange={this.handleChange} name = "description" placeholder='Feedbacks' />
             </Form.Group>
-            <Form.TextArea label='Methods' name = "method" placeholder='List your methods here.' value={this.state.method} onChange={this.handleMethod} />
+            <Form.TextArea label='Methods' name = "method" placeholder='List your methods here.' value={this.state.method} onChange={this.handleChange} />
             <Form.Input fluid label='Picture Url' name = "picture_url" placeholder='Copy your picture url here.'
               value={this.state.picture_url} onChange={this.handleChange}/>
             <Form.Field label='Upload picture' control='button'>
