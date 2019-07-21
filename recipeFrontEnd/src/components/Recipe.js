@@ -14,10 +14,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
+
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import ClearIcon from '@material-ui/icons/Clear'
 // import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import User from "./User"
 import { withRouter } from "react-router-dom";
@@ -88,6 +87,23 @@ class Recipe extends React.Component {
    this.setState({ anchorEl: null });
  };
 
+ handleDeletePost = e => {
+
+ }
+// fetch('api/getRecipes/')
+ handleDelete = (event) => {
+  fetch(`api/getRecipes/` + this.props.recipe.id, {
+    method: 'DELETE',
+  }).then(res => this.fetchPosts())
+}
+
+fetchPosts = () => {
+  fetch('api/getRecipes')
+  .then(res => res.json())
+  .then(res => this.setState({
+    recipes: res.recipes
+  }))
+}
 
   // renderAvatar = () => {
   //   const {classes} = this.props;
@@ -99,7 +115,7 @@ class Recipe extends React.Component {
   render() {
   const { classes } = this.props;
   const { anchorEl } = this.state;
-
+  console.log(this.props)
   return (
 
     <React.Fragment>
@@ -112,7 +128,7 @@ class Recipe extends React.Component {
                     </Avatar> }
             action={
               <IconButton> {/*Need to add delete function.*/}
-                <MoreVertIcon
+                <ClearIcon
                   aria-owns={anchorEl ? "simple-menu" : null}
                   aria-haspopup="true"
                   onClick={this.handleDeletePost}

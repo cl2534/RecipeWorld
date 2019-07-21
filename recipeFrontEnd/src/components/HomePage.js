@@ -47,7 +47,9 @@ export default class HomePage extends Component {
             <br/>
             RecipeWorld features individual's specialized recipes and articles that you can use for your own home cooks!
             <br/>
-            You'll find personal tips, feedbacks, and directions for each recipes so you can enjoy your home cooking easily.
+            You'll find personal tips and directions for each recipes so you can enjoy your home cooking easily.
+            <br/>
+            Happy Cooking!
           </Typography>
           <br/>
           <Grid container spacing={16} justify="center">

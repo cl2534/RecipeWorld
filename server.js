@@ -85,13 +85,15 @@ router.get("/getRecipes/:id", (req, res) => {
   })
 })
 
-router.delete("/getRecipes", (req, res) => {
-  const { id } = req.body;
+router.delete("/getRecipes/:id", (req, res) => {
+  let recipeId = req.params.id
   Recipe.findOneAndDelete(id, err => {
     if (err) return res.send(err);
     return res.json();
-  });
-});
+  })
+})
+
+
 // newRecipe.save(function(err) {
 //   if (err) return err
 // })

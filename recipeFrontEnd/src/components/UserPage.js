@@ -18,6 +18,7 @@ export default class UserPage extends Component {
     this.getUser()
   }
 
+//This function will grab user's Id and based on the User's Id, it will call "getMyRecipes" function.
   getUser = () => {
     if (window.location.href.includes("my-page")) {
       fetch('api/getUsers/' + this.props.userId)
@@ -41,6 +42,7 @@ export default class UserPage extends Component {
     }
   }
 
+//Given user Id as an argument, this function will filter recipes based on given user's id.
   getmyRecipes = (userId) => {
     fetch('api/getRecipes/')
       .then(res => res.json())
