@@ -20,9 +20,9 @@
   "homepage": "https://github.com/nyu-csci-ua-0480-001-003-fall-2018/cl2534-final-project#readme",
   "dependencies": {
     "@material-ui/icons": "^4.2.1",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "concurrently": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-session": "^1.16.2",
     "mongo": "^0.1.0",
     "mongod": "^2.0.0",
