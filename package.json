@@ -22,7 +22,7 @@
     "@material-ui/icons": "^4.2.1",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "mongo": "^0.1.0",
     "mongod": "^2.0.0",
